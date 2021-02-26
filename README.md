@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Generic Title
 
 This is a junk repository meant for practicing collaboration between new git users.
@@ -36,4 +34,3 @@ Terry Phang
 ~~Edited by Terry Phang~~
 
 David Curie
->>>>>>> parent of 81c60cf... Fixed typos in code blocks
