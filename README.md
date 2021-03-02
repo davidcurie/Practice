@@ -12,6 +12,7 @@ git pull
 - Stage updated file(s) to git
 ```
 git add README.md (File2.md File3.ipynb ...)
+# git add . # add all changed files at once
 ```
 - Commit (update snapshot) of your personal repository with your staged changes
 ```
