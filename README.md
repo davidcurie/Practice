@@ -13,6 +13,7 @@ If present, the README file of any project will be displayed in your browser by 
 - GitHub Flow: <https://guides.github.com/introduction/flow/>
 - Branching best practices : <https://nvie.com/posts/a-successful-git-branching-model/>
 - GitHub Pages: <https://pages.github.com>
+- Git Cheat Sheet: <https://www.git-tower.com/learn/cheat-sheets/git/>
 
 
 -----
@@ -21,8 +22,8 @@ If present, the README file of any project will be displayed in your browser by 
 
 1. Make sure git is installed on your machine.
     - [https://git-scm.com/downloads](https://git-scm.com/downloads)
-2. Click the green `Code` button in the top right of this repository.
-3. Select the protocol with which you want to interact with this repository. Clone via https is generally recommended for beginners. Copy this URL to your clipboard.
+2. Click the green `Code` button in the top right of this repository.  
+3. Select the protocol with which you want to interact with this repository. Clone via https is generally recommended for beginners. Copy this URL to your clipboard.  
 4. Open a terminal and navigate your working directory to your desired location for where you want to paste this project.
 5. Paste this repository as a directory by entering the following command in your terminal:
     ```
@@ -89,16 +90,21 @@ Terry Phang
     ```
     git diff --staged SampleFile.ext
     ```
-    - This will list the contents of the specified file in your terminal. Lines that have been added since the last commit will appear in green; lines that have been removed will appear in red. Untouched lines will not be formatted. There are other arguments that allow you to only see new additions/subtractions (suppressing display of unchanged lines) or to show differences word-by-word instead of line-by-line. See documentation for more arguments.
+    - This will list the contents of the specified file in your terminal. Lines that have been added since the last commit will appear in green; lines that have been removed will appear in red. Untouched lines will not be formatted. There are other arguments that allow you to only see new additions/subtractions (suppressing display of unchanged lines) or to show differences word-by-word instead of line-by-line. For example,
+    ```
+    git diff --staged --word-diff <file>
+    ```
+    will highlight only changed words (useful for essays). See documentation for more arguments.
     - If no file is given as an argument, the contents of all staged files are listed sequentially in the terminal.
-- To revert a staged file back to its state during the last commit:
+- To restore a staged file back to its state during the last commit:
     ```
     git restore SampleFile.ext
     ```
     - This will discard changes you made since the last commit, and it cannot be undone.
-    - If you instead mean to remove an edited file from the staging directory (and thus the next commit cycle) but keep the changes intact, you can run instead:
+    - If you instead mean to remove an edited file from the staging directory (and thus prevent the changes from showing up in the next commit cycle) but keep the changes locally intact on your computer, you can run instead:
     ```
     git restore --staged SampleFile.ext
     ```
+    - See more info here: <https://www.git-tower.com/learn/git/commands/git-restore/>
 > Note that you cannot restore back to a previously uncommitted change. You may edit files after they have been staged but before they have been committed. If you want those new edits to be committed, you need to re-add the file to the staging directory. It is also not possible to view a diff log of files that have been added to the staging directory multiple times. If you overwrite your previously staged file in the staging directory with your current edits, you will not be able to see a diff between your newest edits and previous edits. You will still be able to view the newest edits against the last commit.
 > Treat commits as periodic checkpoints. You could be extra pedantic and commit after thoughtful change. For example, if tracking a dissertation, you could commit after every paragraph to keep a log of all new ideas. You could instead commit after each re-write; this would keep your history of changes more manageable but you lose the ability to selectively bring back parts of one version into another version.
