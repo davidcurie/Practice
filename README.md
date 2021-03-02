@@ -5,9 +5,9 @@ This is a junk repository meant for practicing collaboration between new git use
 Add your name to this README file and push it to this repository
 
 - get the latest version from the servers
-```
-git pull
-```
+    ```
+    git pull
+    ```
 - Edit the file locally on your computer
 - Stage updated file(s) to git
 ```
