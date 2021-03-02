@@ -14,6 +14,9 @@ If present, the README file of any project will be displayed in your browser by 
 - Branching best practices : <https://nvie.com/posts/a-successful-git-branching-model/>
 - GitHub Pages: <https://pages.github.com>
 
+
+-----
+
 ## Getting this repository on your local machine
 
 1. Make sure git is installed on your machine.
@@ -22,9 +25,9 @@ If present, the README file of any project will be displayed in your browser by 
 3. Select the protocol with which you want to interact with this repository. Clone via https is generally recommended for beginners. Copy this URL to your clipboard.
 4. Open a terminal and navigate your working directory to your desired location for where you want to paste this project.
 5. Paste this repository as a directory by entering the following command in your terminal:
-```
-git clone URL
-```
+    ```
+    git clone URL
+    ```
 where URL is the stored URL in your clipboard.
 
 > NOTE: If you don't plan on needing continuous updates of this repository, you can instead extract the ZIP file of this repository onto your machine. Changes you make to contents of this ZIP file will never be reflected in the online repository unless you explicitly take extra steps. This method is ideal if you don't want to install git and just need a copy of someone's code.
@@ -32,6 +35,9 @@ where URL is the stored URL in your clipboard.
 After completion of the above steps, you should see the files from this directory on your local machine. Changes you make to these files will not be reflected in the online repository until you explicitly sync changes.
 
 To delete a repository on your machine, simply delete the folder of the extracted files. You will not affect upstream projects, but you will lose the ability to track changes from when you cloned it last.
+
+
+-----
 
 ## Editing files in this repository
 
@@ -70,3 +76,29 @@ David Curie
 Brian Lerner  
 Terry Phang  
 
+-----
+
+## Other Useful Commands
+
+- To check the status of your staging directory before you commit, run the following command:
+    ```
+    git status
+    ```
+    - This will tell you what branch you are on along with the files git knows you have changed since your last commit or pull. Files you have changed but not staged for commit appear in red. (This means your next sync won't update that file if you push.) Files that are ready to be committed will appear in green. This means tracked changes are up to date and the changes from the next commit will be included in the history of changes for that file.
+- To check the explicit changes you made to a file since your last commit, run the following command
+    ```
+    git diff --staged SampleFile.ext
+    ```
+    - This will list the contents of the specified file in your terminal. Lines that have been added since the last commit will appear in green; lines that have been removed will appear in red. Untouched lines will not be formatted. There are other arguments that allow you to only see new additions/subtractions (suppressing display of unchanged lines) or to show differences word-by-word instead of line-by-line. See documentation for more arguments.
+    - If no file is given as an argument, the contents of all staged files are listed sequentially in the terminal.
+- To revert a staged file back to its state during the last commit:
+    ```
+    git restore SampleFile.ext
+    ```
+    - This will discard changes you made since the last commit, and it cannot be undone.
+    - If you instead mean to remove an edited file from the staging directory (and thus the next commit cycle) but keep the changes intact, you can run instead:
+    ```
+    git restore --staged SampleFile.ext
+    ```
+> Note that you cannot restore back to a previously uncommitted change. You may edit files after they have been staged but before they have been committed. If you want those new edits to be committed, you need to re-add the file to the staging directory. It is also not possible to view a diff log of files that have been added to the staging directory multiple times. If you overwrite your previously staged file in the staging directory with your current edits, you will not be able to see a diff between your newest edits and previous edits. You will still be able to view the newest edits against the last commit.
+> Treat commits as periodic checkpoints. You could be extra pedantic and commit after thoughtful change. For example, if tracking a dissertation, you could commit after every paragraph to keep a log of all new ideas. You could instead commit after each re-write; this would keep your history of changes more manageable but you lose the ability to selectively bring back parts of one version into another version.
