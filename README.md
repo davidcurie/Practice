@@ -15,9 +15,13 @@ Add your name to this README file and push it to this repository
     ```
     git add README.md (File2.md File3.ipynb ...)
     ```
-    or add all changed files at once with
+    or instead add all modified files at once with
     ```
     git add .
+    ```
+    or
+    ```
+    git add -A
     ```
 4. Commit (update snapshot) of your personal repository with your staged changes
     ```
