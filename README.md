@@ -1,4 +1,4 @@
-# David Branch
+# Brian Branch
 
 This is a junk repository meant for practicing collaboration between new git users. This is a new README file in a separate branch called David. This is no the only change on this branch, but it is the first change you may notice because it shows up on the README page.
 
