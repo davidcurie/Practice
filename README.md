@@ -13,9 +13,9 @@ git pull
 ```
 git add README.md (File2.md File3.ipynb ...)
 ```
-or
+or add all changed files at once with
 ```
-git add . # add all changed files at once
+git add .
 ```
 - Commit (update snapshot) of your personal repository with your staged changes
 ```
