@@ -111,4 +111,5 @@ Terry Phang
     ```
     - See more info here: <https://www.git-tower.com/learn/git/commands/git-restore/>
 > Note that you cannot restore back to a previously uncommitted change. You may edit files after they have been staged but before they have been committed. If you want those new edits to be committed, you need to re-add the file to the staging directory. It is also not possible to view a diff log of files that have been added to the staging directory multiple times. If you overwrite your previously staged file in the staging directory with your current edits, you will not be able to see a diff between your newest edits and previous edits. You will still be able to view the newest edits against the last commit.
+
 > Treat commits as periodic checkpoints. You could be extra pedantic and commit after thoughtful change. For example, if tracking a dissertation, you could commit after every paragraph to keep a log of all new ideas. You could instead commit after each re-write; this would keep your history of changes more manageable but you lose the ability to selectively bring back parts of one version into another version.
