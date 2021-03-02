@@ -2,6 +2,18 @@
 
 This is a junk repository meant for practicing collaboration between new git users.
 
+If present, the README file of any project will be displayed in your browser by default when you navigate to this repository online.
+
+## Useful resources
+
+- Git-It tutorial: <https://github.com/jlord/git-it-electron>
+- GitHub Desktop: <https://desktop.github.com>
+
+### Learning the tools
+- GitHub Flow: <https://guides.github.com/introduction/flow/>
+- Branching best practices : <https://nvie.com/posts/a-successful-git-branching-model/>
+- GitHub Pages: <https://pages.github.com>
+
 ## Getting this repository on your local machine
 
 1. Make sure git is installed on your machine.
@@ -23,9 +35,10 @@ To delete a repository on your machine, simply delete the folder of the extracte
 
 ## Editing files in this repository
 
-EXAMPLE: Add your name to this README file and push it to this repository
+EXAMPLE: Add your name to this README file and push it to this repository.
+> This example assumes you have cloned this repository as outlined in the steps above. Start this example in the terminal that has its working directory already located to where this repository was extracted.
 
-1. get the latest version from the servers
+1. Get the latest version from the servers
     ```
     git pull
     ```
@@ -53,7 +66,7 @@ EXAMPLE: Add your name to this README file and push it to this repository
 
 ### Add your name here and see it reflected in this repository
 
-David Curie
+David Curie  
 Brian Lerner  
 Terry Phang  
 
