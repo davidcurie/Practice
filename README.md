@@ -86,16 +86,20 @@ Terry Phang
     git status
     ```
     - This will tell you what branch you are on along with the files git knows you have changed since your last commit or pull. Files you have changed but not staged for commit appear in red. (This means your next sync won't update that file if you push.) Files that are ready to be committed will appear in green. This means tracked changes are up to date and the changes from the next commit will be included in the history of changes for that file.
-- To check the explicit changes you made to a file since your last commit, run the following command
+- To check the explicit changes you made to a staged file since your last commit, run the following command
     ```
     git diff --staged SampleFile.ext
     ```
-    - This will list the contents of the specified file in your terminal. Lines that have been added since the last commit will appear in green; lines that have been removed will appear in red. Untouched lines will not be formatted. There are other arguments that allow you to only see new additions/subtractions (suppressing display of unchanged lines) or to show differences word-by-word instead of line-by-line. For example,
+    - This will list the contents of the specified file as it appeared when you added it to your staging directory. Lines that have been added since the last commit will appear in green; lines that have been removed will appear in red. Untouched lines will not be formatted. There are other arguments that allow you to only see new additions/subtractions (suppressing display of unchanged lines) or to show differences word-by-word instead of line-by-line. For example,
     ```
     git diff --staged --word-diff <file>
     ```
     will highlight only changed words (useful for essays). See documentation for more arguments.
     - If no file is given as an argument, the contents of all staged files are listed sequentially in the terminal.
+    - If you want to look at the difference between your current file, irrespective of whether it has been staged, and the last committed version, you can simply run
+    ```
+    git diff <file>
+    ```
 - To restore a staged file back to its state during the last commit:
     ```
     git restore SampleFile.ext
