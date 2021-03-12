@@ -10,6 +10,7 @@ If present, the README file of any project will be displayed in your browser by 
 - GitHub Desktop: <https://desktop.github.com>
 
 ### Learning the tools
+
 - GitHub Flow: <https://guides.github.com/introduction/flow/>
 - Branching best practices : <https://nvie.com/posts/a-successful-git-branching-model/>
 - GitHub Pages: <https://pages.github.com>
@@ -26,7 +27,7 @@ If present, the README file of any project will be displayed in your browser by 
 3. Select the protocol with which you want to interact with this repository. Clone via https is generally recommended for beginners. Copy this URL to your clipboard.  
 4. Open a terminal and navigate your working directory to your desired location for where you want to paste this project.
 5. Paste this repository as a directory by entering the following command in your terminal:
-    ```
+    ```bash
     git clone URL
     ```
 where URL is the stored URL in your clipboard.
@@ -46,28 +47,28 @@ EXAMPLE: Add your name to this README file and push it to this repository.
 > This example assumes you have cloned this repository as outlined in the steps above. Start this example in the terminal that has its working directory already located to where this repository was extracted.
 
 1. Get the latest version from the servers
-    ```
+    ```bash
     git pull
     ```
 2. Edit the file locally on your computer
 3. Stage updated file(s) to git
-    ```
+    ```bash
     git add README.md (File2.md File3.ipynb ...)
     ```
     or instead add all modified files at once with
-    ```
+    ```bash
     git add .
     ```
     or
-    ```
+    ```bash
     git add -A
     ```
 4. Commit (update snapshot) of your personal repository with your staged changes
-    ```
+    ```bash
     git commit -m "Your update message here"
     ```
 5. Tell the servers about your updated changes
-    ```
+    ```bash
     git push
     ```
 
@@ -82,31 +83,31 @@ Terry Phang
 ## Other Useful Commands
 
 - To check the status of your staging directory before you commit, run the following command:
-    ```
+    ```bash
     git status
     ```
     - This will tell you what branch you are on along with the files git knows you have changed since your last commit or pull. Files you have changed but not staged for commit appear in red. (This means your next sync won't update that file if you push.) Files that are ready to be committed will appear in green. This means tracked changes are up to date and the changes from the next commit will be included in the history of changes for that file.
 - To check the explicit changes you made to a staged file since your last commit, run the following command
-    ```
+    ```bash
     git diff --staged SampleFile.ext
     ```
     - This will list the contents of the specified file as it appeared when you added it to your staging directory. Lines that have been added since the last commit will appear in green; lines that have been removed will appear in red. Untouched lines will not be formatted. There are other arguments that allow you to only see new additions/subtractions (suppressing display of unchanged lines) or to show differences word-by-word instead of line-by-line. For example,
-    ```
+    ```bash
     git diff --staged --word-diff <file>
     ```
     will highlight only changed words (useful for essays). See documentation for more arguments.
     - If no file is given as an argument, the contents of all staged files are listed sequentially in the terminal.
     - If you want to look at the difference between your current file, irrespective of whether it has been staged, and the last committed version, you can simply run
-    ```
+    ```bash
     git diff <file>
     ```
 - To restore a staged file back to its state during the last commit:
-    ```
+    ```bash
     git restore SampleFile.ext
     ```
     - This will discard changes you made since the last commit, and it cannot be undone.
     - If you instead mean to remove an edited file from the staging directory (and thus prevent the changes from showing up in the next commit cycle) but keep the changes locally intact on your computer, you can run instead:
-    ```
+    ```bash
     git restore --staged SampleFile.ext
     ```
     - See more info here: <https://www.git-tower.com/learn/git/commands/git-restore/>
