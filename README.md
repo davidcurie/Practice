@@ -76,7 +76,7 @@ EXAMPLE: Add your name to this README file and push it to this repository.
 
 David Curie  
 Brian Lerner  
-Terry Phang   
+Terry Phang  
 Alex Toyryla  
 
 -----
