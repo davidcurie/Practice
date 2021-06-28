@@ -1,4 +1,4 @@
-# Master Branch
+# Alex Branch
 
 This is a junk repository meant for practicing collaboration between new git users.
 
